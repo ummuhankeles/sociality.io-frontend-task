@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arsenal', sans-serif;
+    letter-spacing: 1px;
+}
+
+.homepage {
+    display: flex;
+    width: 100%;
+    .homepage__navbar {
+        width: 25%;
+        background-color: #31363B;
+        &--brand {
+            width: 100%;
+            height: 51px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &--content {
+            display: flex;
+            width: 100%;
+            &--logo {
+                width: 25%;
+                background-color: #2A2F33;
+                &--items {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    &:first-child {
+                        margin-top: 10px;
+                    }
+                    div {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            &--menu {
+                width: 75%;
+                background-color: #393D42;
+                &--items {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    &:first-child {
+                        margin-top: 10px;
+                    }
+                    .homepage__navbar--content--menu--item {
+                        width: 100%;
+                        height: 57px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        &--notifications {
+                            width: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 12px;
+                            border: 0.5px solid #73D9C7;
+                            border-radius: 8px;
+                        }
+                        &:hover {
+                            .homepage__navbar--content--menu--item--icon {
+                                color: #fff;
+                            }
+                            cursor: pointer;
+                            background-color: #F55661;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .homepage__content {
+        width: 75%;
+    }
+}

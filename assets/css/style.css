@@ -1,3 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arsenal', sans-serif;
+  letter-spacing: 1px; }
 
+.homepage {
+  display: flex;
+  width: 100%; }
+  .homepage .homepage__navbar {
+    width: 25%;
+    background-color: #31363B; }
+    .homepage .homepage__navbar--brand {
+      width: 100%;
+      height: 51px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .homepage .homepage__navbar--content {
+      display: flex;
+      width: 100%; }
+      .homepage .homepage__navbar--content--logo {
+        width: 25%;
+        background-color: #2A2F33; }
+        .homepage .homepage__navbar--content--logo--items {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px; }
+          .homepage .homepage__navbar--content--logo--items:first-child {
+            margin-top: 10px; }
+          .homepage .homepage__navbar--content--logo--items div {
+            margin-bottom: 10px; }
+      .homepage .homepage__navbar--content--menu {
+        width: 75%;
+        background-color: #393D42; }
+        .homepage .homepage__navbar--content--menu--items {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .homepage .homepage__navbar--content--menu--items:first-child {
+            margin-top: 10px; }
+          .homepage .homepage__navbar--content--menu--items .homepage__navbar--content--menu--item {
+            width: 100%;
+            height: 57px;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between; }
+            .homepage .homepage__navbar--content--menu--items .homepage__navbar--content--menu--item--notifications {
+              width: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 12px;
+              border: 0.5px solid #73D9C7;
+              border-radius: 8px; }
+            .homepage .homepage__navbar--content--menu--items .homepage__navbar--content--menu--item:hover {
+              cursor: pointer;
+              background-color: #F55661; }
+              .homepage .homepage__navbar--content--menu--items .homepage__navbar--content--menu--item:hover .homepage__navbar--content--menu--item--icon {
+                color: #fff; }
+  .homepage .homepage__content {
+    width: 75%; }
 
 /*# sourceMappingURL=style.css.map */
