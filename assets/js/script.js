@@ -2,7 +2,9 @@ let postDate = document.querySelector(".homepage__content--postdate");
 let postDate2 = document.querySelector(".homepage__content--postdate2");
 let cardItem = document.querySelector(".homepage__content--items");
 let cardItem2 = document.querySelector(".homepage__content--items2");
-let icon = document.querySelector(".homepage__content--cards--item--leftPart");
+let leftPart = document.querySelector(".homepage__content--cards--item--leftPart");
+let icon;
+let statusDiv;
 
 fetch("services/data.json")
   .then(function (resp) {
@@ -25,25 +27,50 @@ fetch("services/data.json")
     postDate.innerHTML = `<h5>${lastDateFormatted}</h5>`;
     postDate2.innerHTML = `<h5>${firstDateFormatted}</h5>`;
 
-    if(data.posts_by_date["2021-07-01"].account === 'facebook') {
-      icon.innerHTML = `<i class="fa-brands fa-facebook-f"></i>`
-    }
-
     getLastData(data);
     getFirstData(data);
 
-    console.log(data.posts_by_date);
-    // console.log(data.posts_by_date["2021-07-01"]);
-  });
+    console.log(data.posts_by_date)
+});
 
 function getLastData(data) {
   let item = "";
   data.posts_by_date["2021-07-01"].forEach((e) => {
+    if(e.account.channel === 'facebook') {
+      icon = `<i class="fa-brands fa-facebook-f"></i>`
+    } else {
+      icon = `<i class="fa-brands fa-twitter"></i>`
+    }
+    switch (e.status) {
+      case 0:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #F7BF38">
+                      ${icon}
+                    </div>`
+        break;
+      case 1:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #3ac183">
+                      ${icon}
+                    </div>`
+        break;
+      case 2:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #67B1F2">
+                      ${icon}
+                    </div>`
+        break;
+      case 3:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #acacac">
+                      ${icon}
+                    </div>`
+        break;
+      default:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #FB6450">
+                      ${icon}
+                    </div>`
+        break;
+    }
     item += `
     <div class="col-md-4 homepage__content--cards--item">
-      <div class="homepage__content--cards--item--leftPart">
-        <i class="fa-brands fa-facebook-f"></i>
-      </div>
+      ${statusDiv}
       <div class="homepage__content--cards--item--rightPart p-3">
         <div class="homepage__content--cards--item--rightPart--top mb-3">
           <div class="homepage__content--cards--item--rightPart--top--date">${e.published_at}</div>
@@ -81,17 +108,51 @@ function getLastData(data) {
     </div>
     `
     cardItem.innerHTML = item;
+    
+      
   });
 }
 
 function getFirstData(data) {
   let item = "";
   data.posts_by_date["2021-06-17"].forEach((e) => {
+    if(e.account.channel === 'facebook') {
+      icon = `<i class="fa-brands fa-facebook-f"></i>`
+    } else if (e.account.channel === 'twitter') {
+      icon = `<i class="fa-brands fa-twitter"></i>`
+    } else {
+      icon = `<i class="fa-brands fa-instagram"></i>`
+    }
+    switch (e.status) {
+      case 0:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #F7BF38">
+                      ${icon}
+                    </div>`
+        break;
+      case 1:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #3ac183">
+                      ${icon}
+                    </div>`
+        break;
+      case 2:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #67B1F2">
+                      ${icon}
+                    </div>`
+        break;
+      case 3:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #acacac">
+                      ${icon}
+                    </div>`
+        break;
+      default:
+        statusDiv = `<div class="homepage__content--cards--item--leftPart" style="background-color: #FB6450">
+                      ${icon}
+                    </div>`
+        break;
+    }
     item += `
     <div class="col-md-4 homepage__content--cards--item">
-      <div class="homepage__content--cards--item--leftPart">
-        <i class="fa-brands fa-facebook-f"></i>
-      </div>
+      ${statusDiv}
       <div class="homepage__content--cards--item--rightPart p-3">
         <div class="homepage__content--cards--item--rightPart--top mb-3">
           <div class="homepage__content--cards--item--rightPart--top--date">${e.published_at}</div>
