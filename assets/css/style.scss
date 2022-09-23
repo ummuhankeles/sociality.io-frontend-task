@@ -6,12 +6,7 @@
   letter-spacing: 1px;
 }
 
-html,body {
-  height: 100%;
-}
-
 .homepage {
-  height: 100%;
   display: flex;
   .homepage__navbar {
     background-color: #31363b;
@@ -25,7 +20,6 @@ html,body {
     }
     &--content {
       display: flex;
-      height: 100%;
       &--logo {
         background-color: #2a2f33;
         &--items {
@@ -78,6 +72,110 @@ html,body {
               }
               cursor: pointer;
               background-color: #f55661;
+            }
+          }
+        }
+      }
+    }
+  }
+  .homepage__content {
+    width: 100%;
+    background-color: #f5f7f8;
+    .homepage__content--description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &--items {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        .homepage__content--description--item {
+          margin-right: 30px;
+          &:nth-child(1){
+            i {
+              color: #ACACAC;
+            }
+          }
+          &:nth-child(2){
+            i {
+              color: #3ac183;
+            }
+          }
+          &:nth-child(3){
+            i {
+              color: #F7BF38;
+            }
+          }
+          &:nth-child(4){
+            i {
+              color: #FB6450;
+            }
+          }
+          &:nth-child(5){
+            i {
+              color: #67B1F2;
+            }
+          }
+        }
+      }
+      &--profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+      }
+    }
+    &--postdate {
+      display: flex;
+      align-items: center;
+    }
+    &--items, &--items2 {
+      .homepage__content--cards--item {
+        display: flex;
+        height: 515px;
+        margin: 0;
+        padding: 10px;
+        &--leftPart {
+          width: 10%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #3ac183;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          i {
+            color: #fff;
+          }
+        }
+        &--rightPart {
+          width: 90%;
+          background-color: #fff;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+          &--top {
+            display: flex;
+            justify-content: space-between;
+            &--actions {
+              display: flex;
+              flex-direction: row;
+              &--item {
+                margin-left: 10px;
+                cursor: pointer;
+                i {
+                  color: grey;
+                }
+              }
+            }
+          }
+          &--bottom {
+            display: flex;
+            flex-direction: row;
+            &--item {
+              margin-right: 15px;
+              cursor: pointer;
+              i {
+                color: grey;
+              }
             }
           }
         }

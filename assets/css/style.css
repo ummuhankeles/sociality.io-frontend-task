@@ -5,11 +5,7 @@
   font-family: "Arsenal", sans-serif;
   letter-spacing: 1px; }
 
-html, body {
-  height: 100%; }
-
 .homepage {
-  height: 100%;
   display: flex; }
   .homepage .homepage__navbar {
     background-color: #31363b; }
@@ -21,8 +17,7 @@ html, body {
       justify-content: center;
       background-color: #31363b; }
     .homepage .homepage__navbar--content {
-      display: flex;
-      height: 100%; }
+      display: flex; }
       .homepage .homepage__navbar--content--logo {
         background-color: #2a2f33; }
         .homepage .homepage__navbar--content--logo--items {
@@ -68,5 +63,75 @@ html, body {
               background-color: #f55661; }
               .homepage .homepage__navbar--content--menu--items .homepage__navbar--content--menu--item:hover .homepage__navbar--content--menu--item--icon {
                 color: #fff; }
+  .homepage .homepage__content {
+    width: 100%;
+    background-color: #f5f7f8; }
+    .homepage .homepage__content .homepage__content--description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .homepage .homepage__content .homepage__content--description--items {
+        width: 90%;
+        display: flex;
+        align-items: center; }
+        .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item {
+          margin-right: 30px; }
+          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(1) i {
+            color: #ACACAC; }
+          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(2) i {
+            color: #3ac183; }
+          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(3) i {
+            color: #F7BF38; }
+          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(4) i {
+            color: #FB6450; }
+          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(5) i {
+            color: #67B1F2; }
+      .homepage .homepage__content .homepage__content--description--profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%; }
+    .homepage .homepage__content--postdate {
+      display: flex;
+      align-items: center; }
+    .homepage .homepage__content--items .homepage__content--cards--item, .homepage .homepage__content--items2 .homepage__content--cards--item {
+      display: flex;
+      height: 515px;
+      margin: 0;
+      padding: 10px; }
+      .homepage .homepage__content--items .homepage__content--cards--item--leftPart, .homepage .homepage__content--items2 .homepage__content--cards--item--leftPart {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #3ac183;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px; }
+        .homepage .homepage__content--items .homepage__content--cards--item--leftPart i, .homepage .homepage__content--items2 .homepage__content--cards--item--leftPart i {
+          color: #fff; }
+      .homepage .homepage__content--items .homepage__content--cards--item--rightPart, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart {
+        width: 90%;
+        background-color: #fff;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px; }
+        .homepage .homepage__content--items .homepage__content--cards--item--rightPart--top, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--top {
+          display: flex;
+          justify-content: space-between; }
+          .homepage .homepage__content--items .homepage__content--cards--item--rightPart--top--actions, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--top--actions {
+            display: flex;
+            flex-direction: row; }
+            .homepage .homepage__content--items .homepage__content--cards--item--rightPart--top--actions--item, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--top--actions--item {
+              margin-left: 10px;
+              cursor: pointer; }
+              .homepage .homepage__content--items .homepage__content--cards--item--rightPart--top--actions--item i, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--top--actions--item i {
+                color: grey; }
+        .homepage .homepage__content--items .homepage__content--cards--item--rightPart--bottom, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--bottom {
+          display: flex;
+          flex-direction: row; }
+          .homepage .homepage__content--items .homepage__content--cards--item--rightPart--bottom--item, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--bottom--item {
+            margin-right: 15px;
+            cursor: pointer; }
+            .homepage .homepage__content--items .homepage__content--cards--item--rightPart--bottom--item i, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--bottom--item i {
+              color: grey; }
 
 /*# sourceMappingURL=style.css.map */
