@@ -217,6 +217,13 @@
               }
             }
           }
+          &--center {
+            &--img {
+              img {
+                width: 100%;
+              }
+            }
+          }
           &--bottom {
             display: flex;
             flex-direction: row;

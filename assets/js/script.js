@@ -19,8 +19,6 @@ for(let i=0; i<clickMenuItem.length; i++) {
   })
 }
 
-
-
 fetch("services/data.json")
   .then(function (resp) {
     return resp.json();
@@ -102,8 +100,10 @@ function getLastData(data) {
           </div>
         </div>
         <div class="homepage__content--cards--item--rightPart--center mb-3">
-          <div class="homepage__content--cards--item--rightPart--center--text">${e.entry.message}</div>
-          <div class="homepage__content--cards--item--rightPart--center--img"></div>
+          <div class="homepage__content--cards--item--rightPart--center--text mb-3">${e.entry.message}</div>
+          <div class="homepage__content--cards--item--rightPart--center--img">
+            <img onerror="this.src='assets/images/no-post-image.png'" src="${e.entry.image}">
+          </div>
         </div>
         <div class="homepage__content--cards--item--rightPart--bottom">
           <div class="homepage__content--cards--item--rightPart--bottom--item">
@@ -123,8 +123,6 @@ function getLastData(data) {
     </div>
     `
     cardItem.innerHTML = item;
-    
-      
   });
 }
 
@@ -184,8 +182,10 @@ function getFirstData(data) {
           </div>
         </div>
         <div class="homepage__content--cards--item--rightPart--center mb-3">
-          <div class="homepage__content--cards--item--rightPart--center--text">${e.entry.message}</div>
-          <div class="homepage__content--cards--item--rightPart--center--img"></div>
+          <div class="homepage__content--cards--item--rightPart--center--text mb-3">${e.entry.message}</div>
+          <div class="homepage__content--cards--item--rightPart--center--img">
+            <img onerror="this.src='assets/images/no-post-image.png'" src="${e.entry.image}">
+          </div>
         </div>
         <div class="homepage__content--cards--item--rightPart--bottom">
           <div class="homepage__content--cards--item--rightPart--bottom--item">
@@ -207,6 +207,3 @@ function getFirstData(data) {
     cardItem2.innerHTML = item;
   });
 }
-
-/* click the menu item */
-

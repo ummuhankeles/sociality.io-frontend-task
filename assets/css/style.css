@@ -163,6 +163,8 @@
               cursor: pointer; }
               .homepage .homepage__content--items .homepage__content--cards--item--rightPart--top--actions--item i, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--top--actions--item i {
                 color: grey; }
+        .homepage .homepage__content--items .homepage__content--cards--item--rightPart--center--img img, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--center--img img {
+          width: 100%; }
         .homepage .homepage__content--items .homepage__content--cards--item--rightPart--bottom, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--bottom {
           display: flex;
           flex-direction: row; }
