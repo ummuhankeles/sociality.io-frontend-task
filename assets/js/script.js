@@ -1,10 +1,25 @@
-let postDate = document.querySelector(".homepage__content--postdate");
-let postDate2 = document.querySelector(".homepage__content--postdate2");
-let cardItem = document.querySelector(".homepage__content--items");
-let cardItem2 = document.querySelector(".homepage__content--items2");
-let leftPart = document.querySelector(".homepage__content--cards--item--leftPart");
+const clickMenuItem = document.querySelectorAll(".homepage__navbar--content--menu--item");
+const postDate = document.querySelector(".homepage__content--postdate");
+const postDate2 = document.querySelector(".homepage__content--postdate2");
+const cardItem = document.querySelector(".homepage__content--items");
+const cardItem2 = document.querySelector(".homepage__content--items2");
+const leftPart = document.querySelector(".homepage__content--cards--item--leftPart");
 let icon;
 let statusDiv;
+
+for(let i=0; i<clickMenuItem.length; i++) {
+  clickMenuItem[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+    let dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  })
+}
+
+
 
 fetch("services/data.json")
   .then(function (resp) {
@@ -192,3 +207,6 @@ function getFirstData(data) {
     cardItem2.innerHTML = item;
   });
 }
+
+/* click the menu item */
+

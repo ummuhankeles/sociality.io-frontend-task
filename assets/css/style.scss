@@ -8,19 +8,24 @@
 
 .homepage {
   display: flex;
+  width: 100%;
   .homepage__navbar {
     background-color: #31363b;
+    width: 20%;
     &--brand {
       width: 100%;
-      height: 51px;
+      height: 5%;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: #31363b;
     }
     &--content {
+      width: 100%;
+      height: 95%;
       display: flex;
       &--logo {
+        width: 20%;
         background-color: #2a2f33;
         &--items {
           display: flex;
@@ -33,10 +38,18 @@
           }
           div {
             margin-bottom: 10px;
+            a {
+              opacity: .3;
+              &:hover {
+                opacity: 1;
+                transition: all 0.3s ease-in;
+              }
+            }
           }
         }
       }
       &--menu {
+        width: 80%;
         background-color: #393d42;
         &--items {
           display: flex;
@@ -46,32 +59,66 @@
           &:first-child {
             margin-top: 10px;
           }
-          .homepage__navbar--content--menu--item {
+          &--element {
             width: 100%;
-            height: 57px;
-            color: #fff;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            padding: 10px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            &--notifications {
-              width: 30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 12px;
-              border: 0.5px solid #73d9c7;
-              border-radius: 8px;
-            }
-            &:hover {
+            .active {
+              background-color: #f55661;
               .homepage__navbar--content--menu--item--icon {
                 color: #fff;
               }
-              cursor: pointer;
-              background-color: #f55661;
+            }
+            .homepage__navbar--content--menu--item {
+              height: 57px;
+              color: #fff;
+              text-transform: uppercase;
+              padding: 10px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              &--icon {
+                color: #f55661;
+              }
+              &--notifications {
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                border: 0.5px solid #73d9c7;
+                border-radius: 8px;
+              }
+              &:hover {
+                .homepage__navbar--content--menu--item--icon {
+                  color: #fff;
+                }
+                transition: all 0.3s ease-in;
+                cursor: pointer;
+                background-color: #f55661;
+              }
+            }
+            .homepage__navbar--content--menu--dropdown {
+              width: 100%;
+              margin: 0;
+              padding: 20px 0px;
+              background-color: #2a2f33;
+              color: #fff;
+              display: none;
+              ul {
+                color: #fff;
+                margin: 0;
+                li {
+                  a {
+                    text-decoration: none;
+                    color: #fff;
+                    width: 100%;
+                    &:hover {
+                      color: #f55661;
+                      transition: all 0.3s ease-in;
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -79,18 +126,21 @@
     }
   }
   .homepage__content {
-    width: 100%;
+    width: 80%;
     background-color: #f5f7f8;
     .homepage__content--description {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
       &--items {
-        width: 90%;
+        width: 70%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         .homepage__content--description--item {
-          margin-right: 30px;
+          display: flex;
+          align-items: center;
           &:nth-child(1){
             i {
               color: #ACACAC;

@@ -6,19 +6,24 @@
   letter-spacing: 1px; }
 
 .homepage {
-  display: flex; }
+  display: flex;
+  width: 100%; }
   .homepage .homepage__navbar {
-    background-color: #31363b; }
+    background-color: #31363b;
+    width: 20%; }
     .homepage .homepage__navbar--brand {
       width: 100%;
-      height: 51px;
+      height: 5%;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: #31363b; }
     .homepage .homepage__navbar--content {
+      width: 100%;
+      height: 95%;
       display: flex; }
       .homepage .homepage__navbar--content--logo {
+        width: 20%;
         background-color: #2a2f33; }
         .homepage .homepage__navbar--content--logo--items {
           display: flex;
@@ -30,7 +35,13 @@
             margin-top: 10px; }
           .homepage .homepage__navbar--content--logo--items div {
             margin-bottom: 10px; }
+            .homepage .homepage__navbar--content--logo--items div a {
+              opacity: .3; }
+              .homepage .homepage__navbar--content--logo--items div a:hover {
+                opacity: 1;
+                transition: all 0.3s ease-in; }
       .homepage .homepage__navbar--content--menu {
+        width: 80%;
         background-color: #393d42; }
         .homepage .homepage__navbar--content--menu--items {
           display: flex;
@@ -39,43 +50,70 @@
           align-items: center; }
           .homepage .homepage__navbar--content--menu--items:first-child {
             margin-top: 10px; }
-          .homepage .homepage__navbar--content--menu--items .homepage__navbar--content--menu--item {
-            width: 100%;
-            height: 57px;
-            color: #fff;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            padding: 10px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between; }
-            .homepage .homepage__navbar--content--menu--items .homepage__navbar--content--menu--item--notifications {
-              width: 30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 12px;
-              border: 0.5px solid #73d9c7;
-              border-radius: 8px; }
-            .homepage .homepage__navbar--content--menu--items .homepage__navbar--content--menu--item:hover {
-              cursor: pointer;
+          .homepage .homepage__navbar--content--menu--items--element {
+            width: 100%; }
+            .homepage .homepage__navbar--content--menu--items--element .active {
               background-color: #f55661; }
-              .homepage .homepage__navbar--content--menu--items .homepage__navbar--content--menu--item:hover .homepage__navbar--content--menu--item--icon {
+              .homepage .homepage__navbar--content--menu--items--element .active .homepage__navbar--content--menu--item--icon {
                 color: #fff; }
+            .homepage .homepage__navbar--content--menu--items--element .homepage__navbar--content--menu--item {
+              height: 57px;
+              color: #fff;
+              text-transform: uppercase;
+              padding: 10px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between; }
+              .homepage .homepage__navbar--content--menu--items--element .homepage__navbar--content--menu--item--icon {
+                color: #f55661; }
+              .homepage .homepage__navbar--content--menu--items--element .homepage__navbar--content--menu--item--notifications {
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                border: 0.5px solid #73d9c7;
+                border-radius: 8px; }
+              .homepage .homepage__navbar--content--menu--items--element .homepage__navbar--content--menu--item:hover {
+                transition: all 0.3s ease-in;
+                cursor: pointer;
+                background-color: #f55661; }
+                .homepage .homepage__navbar--content--menu--items--element .homepage__navbar--content--menu--item:hover .homepage__navbar--content--menu--item--icon {
+                  color: #fff; }
+            .homepage .homepage__navbar--content--menu--items--element .homepage__navbar--content--menu--dropdown {
+              width: 100%;
+              margin: 0;
+              padding: 20px 0px;
+              background-color: #2a2f33;
+              color: #fff;
+              display: none; }
+              .homepage .homepage__navbar--content--menu--items--element .homepage__navbar--content--menu--dropdown ul {
+                color: #fff;
+                margin: 0; }
+                .homepage .homepage__navbar--content--menu--items--element .homepage__navbar--content--menu--dropdown ul li a {
+                  text-decoration: none;
+                  color: #fff;
+                  width: 100%; }
+                  .homepage .homepage__navbar--content--menu--items--element .homepage__navbar--content--menu--dropdown ul li a:hover {
+                    color: #f55661;
+                    transition: all 0.3s ease-in; }
   .homepage .homepage__content {
-    width: 100%;
+    width: 80%;
     background-color: #f5f7f8; }
     .homepage .homepage__content .homepage__content--description {
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      width: 100%; }
       .homepage .homepage__content .homepage__content--description--items {
-        width: 90%;
+        width: 70%;
         display: flex;
-        align-items: center; }
+        align-items: center;
+        justify-content: space-between; }
         .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item {
-          margin-right: 30px; }
+          display: flex;
+          align-items: center; }
           .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(1) i {
             color: #ACACAC; }
           .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(2) i {
