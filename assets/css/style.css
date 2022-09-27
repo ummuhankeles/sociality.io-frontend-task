@@ -8,6 +8,8 @@
 .homepage {
   display: flex;
   width: 100%; }
+  .homepage .homepage__menu--bar {
+    display: none; }
   .homepage .homepage__navbar {
     background-color: #31363b;
     width: 20%; }
@@ -101,30 +103,30 @@
   .homepage .homepage__content {
     width: 80%;
     background-color: #f5f7f8; }
-    .homepage .homepage__content .homepage__content--description {
+    .homepage .homepage__content--description {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%; }
-      .homepage .homepage__content .homepage__content--description--items {
+      .homepage .homepage__content--description--items {
         width: 70%;
         display: flex;
         align-items: center;
         justify-content: space-between; }
-        .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item {
+        .homepage .homepage__content--description--items .homepage__content--description--item {
           display: flex;
           align-items: center; }
-          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(1) i {
+          .homepage .homepage__content--description--items .homepage__content--description--item:nth-child(1) i {
             color: #ACACAC; }
-          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(2) i {
+          .homepage .homepage__content--description--items .homepage__content--description--item:nth-child(2) i {
             color: #3ac183; }
-          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(3) i {
+          .homepage .homepage__content--description--items .homepage__content--description--item:nth-child(3) i {
             color: #F7BF38; }
-          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(4) i {
+          .homepage .homepage__content--description--items .homepage__content--description--item:nth-child(4) i {
             color: #FB6450; }
-          .homepage .homepage__content .homepage__content--description--items .homepage__content--description--item:nth-child(5) i {
+          .homepage .homepage__content--description--items .homepage__content--description--item:nth-child(5) i {
             color: #67B1F2; }
-      .homepage .homepage__content .homepage__content--description--profile {
+      .homepage .homepage__content--description--profile {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -173,5 +175,43 @@
             cursor: pointer; }
             .homepage .homepage__content--items .homepage__content--cards--item--rightPart--bottom--item i, .homepage .homepage__content--items2 .homepage__content--cards--item--rightPart--bottom--item i {
               color: grey; }
+
+/********** tablet version **********/
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: 14px; }
+
+  .homepage .homepage__menu--bar {
+    display: none; }
+  .homepage .homepage__navbar {
+    width: 25%; }
+    .homepage .homepage__navbar--content--logo--items .homepage__navbar--content--logo--item a img {
+      width: 25px;
+      height: 25px; }
+  .homepage .homepage__content {
+    width: 75%; }
+    .homepage .homepage__content--description--items {
+      width: 80%; }
+    .homepage .homepage__content--description--profile img {
+      width: 50px;
+      height: 50px; } }
+@media only screen and (max-width: 992px) {
+  * {
+    font-size: 14px; }
+
+  .homepage .homepage__menu--bar {
+    display: none; }
+  .homepage .homepage__navbar {
+    width: 25%; }
+    .homepage .homepage__navbar--content--logo--items .homepage__navbar--content--logo--item a img {
+      width: 25px;
+      height: 25px; }
+  .homepage .homepage__content {
+    width: 75%; }
+    .homepage .homepage__content--description--items {
+      width: 80%; }
+    .homepage .homepage__content--description--profile img {
+      width: 50px;
+      height: 50px; } }
 
 /*# sourceMappingURL=style.css.map */
